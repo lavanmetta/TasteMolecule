@@ -1,0 +1,32 @@
+.header-container {
+  background-color: whitesmoke;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.nav-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px;
+}
+.nav-logo > img {
+  width: 30px;
+  height: 30px;
+  margin: 6px;
+}
+
+.nav-links > ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 10px;
+}
+
+.nav-links > ul > li {
+  margin: 8px;
+}
