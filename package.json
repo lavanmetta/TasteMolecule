@@ -5,7 +5,7 @@
   "main": "App.js",
   "scripts": {
     "start": "npx parcel index.html",
-    "build": "parcel build",
+    "build": "parcel build index.html",
     "test": "parcel test"
   },
 
