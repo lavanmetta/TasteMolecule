@@ -2,12 +2,13 @@
   display: inline-block;
   -webkit-mask: linear-gradient(270deg, #000 30%, #0005, #000 70%) right/300%
     100%;
-  mask: o;
+  mask: none;
   background-repeat: no-repeat;
   animation: shimmer-container 2.5s infinite;
   height: 160px;
   width: 260px;
   background-color: rgb(201, 201, 201);
+  position: relative;
 }
 
 @keyframes shimmer-container {

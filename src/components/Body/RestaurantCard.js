@@ -4,7 +4,7 @@ import Shimmer from "../Shimmer";
 
 const RestaurantCard = (props) => {
   const [rating, setRating] = useState("");
-  const { cardDetails } = props;
+  const { cardDetails, lists } = props;
  
   const {
     name,
@@ -32,9 +32,9 @@ const RestaurantCard = (props) => {
 
   return (
     <div className="restaurant-card">
-      {cardDetails?.data?.length === 0 ? (
+      {lists.length === 0 ? (
         <Shimmer>
-          <img src={IMG_URL + cloudinaryImageId} alt="Loading" />
+          <img src='' alt='' />
         </Shimmer>
       ) : (
         <img src={IMG_URL + cloudinaryImageId} alt={name} />
