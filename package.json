@@ -2,10 +2,10 @@
   "name": "tastemolecule",
   "version": "1.0.0",
   "description": "food ordering website",
-  "main": "App.js",
+
   "scripts": {
     "start": "npx parcel index.html",
-    "build": "parcel build",
+    "build": "parcel build index.html",
     "test": "parcel test"
   },
 
