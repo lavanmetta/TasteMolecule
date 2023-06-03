@@ -62,17 +62,36 @@
 }
 .search-container {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   padding: 1rem;
+  background-color: aliceblue;
 }
 
-.search-container > input {
-  height: 34px;
-  width: 300px;
-  padding-left: 10px;
-  padding-right: 10px;
+.inp {
+  height: 38px;
+  width: 400px;
+  padding: 10px;
   border-radius: 4px;
-  border: 1px solid grey;
+  border: none;
   outline: none;
+  margin: 10px;
+  font-size: 16px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.s-icon {
+  font-size: 22px;
+  font-weight: bold;
+  background-color: coral;
+  height: 34px;
+  width: 34px;
+  border-radius: 100%;
+  color: white;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
 .carousel {
@@ -83,8 +102,6 @@
   width: 60%;
   margin: auto;
 }
-
-
 
 .carousel > div > img {
   width: 200px;
@@ -106,6 +123,7 @@
   align-items: center;
   background-color: rgb(1, 1, 31);
   padding: 2rem;
+  margin-top: 5rem;
 }
 
 .main-carousel > button {

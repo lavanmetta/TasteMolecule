@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import "./Restaurant.css";
 
 function Search({ handleSearch }) {
-  
-
   const onChangeHandler = (e) => {
     const value = e.target.value;
     handleSearch(value);
@@ -11,7 +9,16 @@ function Search({ handleSearch }) {
 
   return (
     <div className="search-container">
-      <input onChange={onChangeHandler} type="search" placeholder="Search a restaurant" />
+      <div className="s-icon">
+        <i className="ri-search-line "></i>
+      </div>
+
+      <input
+        onChange={onChangeHandler}
+        type="search"
+        className="inp"
+        placeholder="Search a restaurant"
+      />
     </div>
   );
 }

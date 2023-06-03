@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { IMG_URL } from "../../config";
-import Shimmer from "../Shimmer";
+import { Shimmer } from "../Shimmer/Shimmer";
 
 const RestaurantCard = (props) => {
   const [rating, setRating] = useState("");
-  const { cardDetails, lists } = props;
- 
+  const { cardDetails } = props;
+
   const {
     name,
     cloudinaryImageId,
@@ -31,28 +31,24 @@ const RestaurantCard = (props) => {
   };
 
   return (
-    <div className="restaurant-card">
-      {lists.length === 0 ? (
-        <Shimmer>
-          <img src='' alt='' />
-        </Shimmer>
-      ) : (
+    <>
+      <div className="restaurant-card">
         <img src={IMG_URL + cloudinaryImageId} alt={name} />
-      )}
 
-      <div className="Name-container">
-        <h4>{name}</h4>
-        <p>{cuisines?.join(", ")}</p>
-      </div>
+        <div className="Name-container">
+          <h4>{name}</h4>
+          <p>{cuisines?.join(", ")}</p>
+        </div>
 
-      <div className="details-container">
-        <p className={rating}>
-          <i className="ri-star-line"></i> {avgRating}
-        </p>
-        <p>{slaString}</p>
-        <p>{costForTwoString}</p>
+        <div className="details-container">
+          <p className={rating}>
+            <i className="ri-star-line"></i> {avgRating}
+          </p>
+          <p>{slaString}</p>
+          <p>{costForTwoString}</p>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

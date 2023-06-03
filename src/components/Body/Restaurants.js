@@ -5,7 +5,7 @@ import { API_URL } from "../../config";
 import RestaurantCard from "./RestaurantCard";
 import "./Restaurant.css";
 import Search from "./Search";
-import Shimmer from "../Shimmer.js";
+import { Shimmer } from "../Shimmer/Shimmer";
 
 const Restaurants = () => {
   const [restaurantsList, setRestaurantsList] = useState([]);
@@ -41,18 +41,25 @@ const Restaurants = () => {
     <div>
       <Search handleSearch={handleSearch} />
 
-      <div className="list-of-restro">
-        {filteredRestaurants.map((restaurant) => (
-          <RestaurantCard
-            key={uuidv4()}
-            cardDetails={restaurant}
-            isLoading={isLoading}
-            lists={restaurantsList}
-          />
-        ))}
-      </div>
+      {isLoading ? (
+        <div className="restaurant-card">
+          <div className="list-of-restro">
+            <Shimmer />
+          </div>
+        </div>
+      ) : (
+        <div className="list-of-restro">
+          {filteredRestaurants.map((restaurant) => (
+            <RestaurantCard
+              key={uuidv4()}
+              cardDetails={restaurant}
+              isLoading={isLoading}
+            />
+          ))}
+        </div>
+      )}
 
-      {filteredRestaurants.length === 0 && (
+      {filteredRestaurants === 0 && (
         <div className="no-restaurants">
           <h2>No restaurants found</h2>
         </div>

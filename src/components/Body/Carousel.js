@@ -3,6 +3,7 @@ import axios from "axios";
 import { CAROUSEL_URL } from "../../config";
 import { IMG_CAROUSEL_URL } from "../../config";
 import "./Restaurant.css";
+import { CarouselShimmer } from "../Shimmer/Shimmer";
 
 function Carousel() {
   const [listOfCarouselItems, setListOfCarouselItems] = useState([]);
@@ -39,7 +40,7 @@ function Carousel() {
   return (
     <div>
       {isLoading ? (
-        <p>Loading carousel images...</p>
+        <CarouselShimmer />
       ) : listOfCarouselItems.length > 0 ? (
         <div className="main-carousel">
           <button onClick={leftClick}>

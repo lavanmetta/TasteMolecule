@@ -1,0 +1,35 @@
+.shimmer-container {
+  display: inline-block;
+  -webkit-mask: linear-gradient(270deg, #000 30%, #0005, #000 70%) right/300%
+    100%;
+
+  background-repeat: no-repeat;
+  animation: shimmer-container 2.5s infinite;
+  width: 100%;
+  height: 240px;
+  background-color: rgb(201, 201, 201);
+}
+
+@keyframes shimmer-container {
+  100% {
+    -webkit-mask-position: left;
+  }
+}
+
+.c-shimmer-container {
+  display: inline-block;
+  -webkit-mask: linear-gradient(270deg, #000 30%, #0005, #000 70%) right/300%
+    100%;
+  background-repeat: no-repeat;
+  animation: c-shimmer-container 1.3s infinite;
+  height: max-content;
+  width: 100%;
+  height: 300px;
+  background-color: rgb(201, 201, 201);
+}
+
+@keyframes c-shimmer-container {
+  100% {
+    -webkit-mask-position: left;
+  }
+}
