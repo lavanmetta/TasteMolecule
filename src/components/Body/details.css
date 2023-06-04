@@ -2,22 +2,20 @@
   margin-top: 6rem;
   flex-direction: column;
   justify-content: center;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
   background-color: rgb(255, 255, 255);
 }
 
 .c2 {
   display: flex;
   flex-direction: row;
-  max-width: 1000px;
-  margin: auto;
   justify-content: space-between;
-  margin: 10px;
 }
 
 .c1 {
-  max-width: 1000px;
   background-color: rgb(255, 255, 255);
-  margin: auto;
 }
 
 .c3 > h1 {
@@ -70,4 +68,56 @@
 .hr-hr {
   border: 1px solid grey !important;
   width: 100% !important;
+}
+
+.food-item-container {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  padding: 6px;
+  border-radius: 6px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transition: all 300ms ease-in-out;
+}
+
+.food-item-container:hover {
+  transform: scale(1.02);
+  transition: transform 300ms ease-in-out;
+}
+
+.food-item-container > img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.food-item-container > div > p {
+  font-size: 10px;
+  margin: 5px;
+}
+
+.food-item-container > div > h3 {
+  margin: 5px;
+}
+.food-item-container > div > h5 {
+  margin: 5px;
+}
+
+.btn-cart {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 4px;
+  border-radius: 6px;
+  height: 30px;
+}
+
+.btn-cart > button {
+  border: none;
+  width: 80%;
+  background-color: transparent;
+  font-size: 20px;
+  cursor: pointer;
 }

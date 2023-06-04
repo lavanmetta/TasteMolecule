@@ -16,7 +16,7 @@ const Footer = () => {
     setContactLinks(links[2]);
   }, []);
 
-  console.log(useFullLinks);
+  
 
   return (
     <div className="a1">
@@ -24,21 +24,27 @@ const Footer = () => {
         <div className="usefull-container">
           <h3>Usefull Links</h3>
           {useFullLinks.map((each) => (
-            <Link to={each.link}>{each.name}</Link>
+            <Link key={each.id} to={each.link}>
+              {each.name}
+            </Link>
           ))}
         </div>
 
         <div className="usefull-container">
           <h3>Legal</h3>
           {legalLinks.map((each) => (
-            <Link to={each.link}>{each.name}</Link>
+            <Link key={each.id} to={each.link}>
+              {each.name}
+            </Link>
           ))}
         </div>
 
         <div className="usefull-container">
           <h3>Contact</h3>
           {contactLinks.map((each) => (
-            <Link to={each.link}>{each.name}</Link>
+            <Link key={each.id} to={each.link}>
+              {each.name}
+            </Link>
           ))}
         </div>
 

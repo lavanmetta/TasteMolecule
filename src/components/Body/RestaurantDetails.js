@@ -4,6 +4,7 @@ import axios from "axios";
 import { DETAILS_URL } from "../../config";
 import "./details.css";
 import RestaurantBanner from "./RestaurantBanner";
+import FoodItems from "./FoodItems";
 
 function RestaurantDetails() {
   const { resID } = useParams();
@@ -20,11 +21,12 @@ function RestaurantDetails() {
     });
   };
 
-
+  console.log(listOfRestaurants);
 
   return (
     <div className="ir-container">
-      <RestaurantBanner bannerDetails={listOfRestaurants[0]} />;
+      <RestaurantBanner bannerDetails={listOfRestaurants[0]} />
+      <FoodItems foodItems={listOfRestaurants} />
     </div>
   );
 }

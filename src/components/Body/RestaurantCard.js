@@ -15,7 +15,7 @@ const RestaurantCard = (props) => {
     slaString,
     costForTwoString,
     id,
-  } = cardDetails.data.data;
+  } = cardDetails?.data?.data;
 
   useEffect(() => {
     calculateRatingColor();

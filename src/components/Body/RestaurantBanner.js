@@ -13,7 +13,7 @@ function RestaurantBanner(props) {
     feeDetails,
   } = bannerDetails?.card?.card?.info || "";
 
-  console.log(bannerDetails?.card?.card?.info);
+  
 
   useEffect(() => {
     calculateRatingColor();
