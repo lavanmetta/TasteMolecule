@@ -10,10 +10,18 @@ const Header = () => {
         <h2>TasteMolecule</h2>
       </div>
       <div className="nav-links">
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/">Contact</Link>
-        <Link to="/">Offers</Link>
+        <Link to="/">
+          <i className="ri-gift-2-line"></i>Offers
+        </Link>
+        <Link to="/">
+          <i className="ri-home-heart-line"></i>Home
+        </Link>
+        <Link to="/about">
+          <i className="ri-award-line"></i>About
+        </Link>
+        <Link to="/">
+          <i className="ri-customer-service-2-line"></i>Contact
+        </Link>
       </div>
     </div>
   );

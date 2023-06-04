@@ -1,0 +1,73 @@
+.ir-container {
+  margin-top: 6rem;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+}
+
+.c2 {
+  display: flex;
+  flex-direction: row;
+  max-width: 1000px;
+  margin: auto;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.c1 {
+  max-width: 1000px;
+  background-color: rgb(255, 255, 255);
+  margin: auto;
+}
+
+.c3 > h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.c3 > p {
+  margin: 0;
+  font-size: 14px;
+  color: rgb(75, 75, 75);
+}
+
+.red {
+  background-color: red;
+  color: white;
+}
+.green {
+  background-color: rgb(71, 205, 71);
+  color: white;
+}
+.orange {
+  background-color: orange;
+  color: white;
+}
+
+.c4 > p {
+  border: 1px solid rgb(203, 203, 203);
+  width: max-content;
+  padding: 5px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.c4 > p > i {
+  margin: 4px;
+  font-size: 16px;
+}
+
+.c5 {
+  margin: 10px;
+  font-size: 14px;
+}
+
+.c5 > p {
+  margin: 0;
+  color: rgb(75, 75, 75);
+}
+
+.hr-hr {
+  border: 1px solid grey !important;
+  width: 100% !important;
+}

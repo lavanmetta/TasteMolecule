@@ -32,6 +32,8 @@ const Restaurants = () => {
     setFilterText(searchText.toLowerCase());
   };
 
+
+
   const filteredRestaurants = filterText
     ? restaurantsList.filter((restaurant) =>
         restaurant?.data?.data?.name.toLowerCase().includes(filterText)

@@ -1,41 +1,64 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Footer.css";
+import { Link } from "react-router-dom";
+import { listOfLinks } from "./Data";
+import gp from "../../Assets/images/gp.svg";
+
 const Footer = () => {
+  const [useFullLinks, setUseFullLinks] = useState([]);
+  const [legalLinks, setLegalLinks] = useState([]);
+  const [contactLinks, setContactLinks] = useState([]);
+
+  useEffect(() => {
+    const links = listOfLinks();
+    setUseFullLinks(links[0]);
+    setLegalLinks(links[1]);
+    setContactLinks(links[2]);
+  }, []);
+
+  console.log(useFullLinks);
+
   return (
-    <div className="footer">
-      <div>
-        <h2>Usefull Links</h2>
-        <p>Links</p>
-        <p>Links</p>
-        <p>Links</p>
-        <p>Links</p>
-      </div>
+    <div className="a1">
+      <div className="footer">
+        <div className="usefull-container">
+          <h3>Usefull Links</h3>
+          {useFullLinks.map((each) => (
+            <Link to={each.link}>{each.name}</Link>
+          ))}
+        </div>
 
-      <div>
-        <h2>Contact</h2>
-        <p>Links</p>
-        <p>Links</p>
-        <p>Links</p>
-        <p>Links</p>
-      </div>
+        <div className="usefull-container">
+          <h3>Legal</h3>
+          {legalLinks.map((each) => (
+            <Link to={each.link}>{each.name}</Link>
+          ))}
+        </div>
 
-      <div>
-        <h2>Legal</h2>
-        <p>Links</p>
-        <p>Links</p>
-        <p>Links</p>
-        <p>Links</p>
-      </div>
+        <div className="usefull-container">
+          <h3>Contact</h3>
+          {contactLinks.map((each) => (
+            <Link to={each.link}>{each.name}</Link>
+          ))}
+        </div>
 
-      <div>
-        <h2>TasteMolecule</h2>
-        <p>Linkdin</p>
-        <p>Linkdin</p>
-        <p>Linkdin</p>
-        <p>Linkdin</p>
-          
+        <div>
+          <img src={gp} alt="gp" />
+        </div>
       </div>
-      
+      <hr />
+      <div className="author">
+        <p>
+          <Link
+            to="https://www.swiggy.com"
+            style={{ color: "coral", margin: "5px" }}
+            target="_blank"
+          >
+            Swiggy clone
+          </Link>
+          | Made by Lavan Metta
+        </p>
+      </div>
     </div>
   );
 };

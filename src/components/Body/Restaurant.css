@@ -28,11 +28,13 @@
 
 .Name-container > h4 {
   margin: 5px;
+  color: black;
 }
 .Name-container > p {
   margin: 5px;
   font-size: 13px;
   color: grey;
+  color: black;
 }
 
 .details-container {
@@ -43,6 +45,7 @@
 .details-container > p {
   font-size: 13px;
   margin: 5px;
+  color: black;
 }
 
 .red {
@@ -59,6 +62,10 @@
   background-color: orange;
   padding: 1px 5px 1px 5px;
   color: white;
+}
+
+a {
+  text-decoration: none;
 }
 .search-container {
   display: flex;

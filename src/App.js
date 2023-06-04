@@ -6,6 +6,7 @@ import Footer from "./components/Footer/Footer";
 import Restaurants from "./components/Body/Restaurants";
 
 import About from "./components/About/About";
+import RestaurantDetails from "./components/Body/RestaurantDetails.js";
 
 const App = () => {
   return (
@@ -29,6 +30,10 @@ const appRouter = createBrowserRouter([
       {
         path: "about",
         element: <About />,
+      },
+      {
+        path: "/restaurants/:resID",
+        element: <RestaurantDetails />,
       },
     ],
   },

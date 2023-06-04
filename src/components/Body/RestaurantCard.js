@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { IMG_URL } from "../../config";
-import { Shimmer } from "../Shimmer/Shimmer";
+
+import { Link } from "react-router-dom";
 
 const RestaurantCard = (props) => {
   const [rating, setRating] = useState("");
@@ -13,6 +14,7 @@ const RestaurantCard = (props) => {
     avgRating,
     slaString,
     costForTwoString,
+    id,
   } = cardDetails.data.data;
 
   useEffect(() => {
@@ -32,22 +34,24 @@ const RestaurantCard = (props) => {
 
   return (
     <>
-      <div className="restaurant-card">
-        <img src={IMG_URL + cloudinaryImageId} alt={name} />
+      <Link to={"/restaurants/" + id}>
+        <div className="restaurant-card">
+          <img src={IMG_URL + cloudinaryImageId} alt={name} />
 
-        <div className="Name-container">
-          <h4>{name}</h4>
-          <p>{cuisines?.join(", ")}</p>
-        </div>
+          <div className="Name-container">
+            <h4>{name}</h4>
+            <p>{cuisines?.join(", ")}</p>
+          </div>
 
-        <div className="details-container">
-          <p className={rating}>
-            <i className="ri-star-line"></i> {avgRating}
-          </p>
-          <p>{slaString}</p>
-          <p>{costForTwoString}</p>
+          <div className="details-container">
+            <p className={rating}>
+              <i className="ri-star-line"></i> {avgRating}
+            </p>
+            <p>{slaString}</p>
+            <p>{costForTwoString}</p>
+          </div>
         </div>
-      </div>
+      </Link>
     </>
   );
 };
