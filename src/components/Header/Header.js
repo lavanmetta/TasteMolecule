@@ -10,12 +10,10 @@ const Header = () => {
         <h2>TasteMolecule</h2>
       </div>
       <div className="nav-links">
-        <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
-          <li>Cart</li>
-        </ul>
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/">Contact</Link>
+        <Link to="/">Offers</Link>
       </div>
     </div>
   );

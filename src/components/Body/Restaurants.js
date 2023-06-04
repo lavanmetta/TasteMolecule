@@ -6,6 +6,7 @@ import RestaurantCard from "./RestaurantCard";
 import "./Restaurant.css";
 import Search from "./Search";
 import { Shimmer } from "../Shimmer/Shimmer";
+import Carousel from "./Carousel";
 
 const Restaurants = () => {
   const [restaurantsList, setRestaurantsList] = useState([]);
@@ -39,6 +40,7 @@ const Restaurants = () => {
 
   return (
     <div>
+      <Carousel />
       <Search handleSearch={handleSearch} />
 
       {isLoading ? (
