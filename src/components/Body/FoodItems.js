@@ -1,21 +1,17 @@
 import React from "react";
+import { DET_IMG_URL } from "../../config";
 
-function FoodItems(props) {
-  const { foodItems } = props;
-//   const {} = foodItems?.groupedCard?.cardGroupMap?.REGULAR?.cards
-  console.log(foodItems);
+function FoodItems({ foodItem }) {
+  const { name, description, imageId, price } = foodItem?.card?.info || "";
 
   return (
     <div>
       <div className="food-item-container">
-        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/ett3pifsumx32mayklfy" />
+        <img src={DET_IMG_URL + imageId} alt="no picture" />
         <div>
-          <h3>Chicken 65</h3>
-          <h5>159</h5>
-          <p>
-            Serves 1 | Boneless chicken marinated with chilli powder, turmeric
-            powder, salt, garam masala and ginger garlic paste etc. halal
-          </p>
+          <h3>{name}</h3>
+          <h5>₹ {Math.floor(price / 100)}/-</h5>
+          <p>{description}</p>
         </div>
         <div className="btn-cart">
           <button>
