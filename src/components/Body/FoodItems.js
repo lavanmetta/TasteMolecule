@@ -2,7 +2,7 @@ import React from "react";
 import { DET_IMG_URL } from "../../config";
 
 function FoodItems({ foodItem }) {
-  const { name, description, imageId, price } = foodItem?.card?.info || "";
+  const { name, description, imageId, price } = foodItem?.card?.info;
 
   return (
     <div>

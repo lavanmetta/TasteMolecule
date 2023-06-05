@@ -21,9 +21,10 @@ function RestaurantDetails() {
     try {
       const response = await axios.get(DETAILS_URL + resID);
       const lists = response?.data?.data?.cards;
+      console.log(lists)
       setListOfRestaurants(lists);
       const items =
-        lists[3]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card
+        lists[3]?.groupedCard?.cardGroupMap?.REGULAR?.cards[4]?.card?.card
           ?.itemCards || [];
       setFoodItems(items);
       setIsLoading(false);
@@ -31,6 +32,8 @@ function RestaurantDetails() {
       console.error("Error fetching restaurant details:", error);
     }
   };
+
+  
 
   return (
     <div className="ir-container">
