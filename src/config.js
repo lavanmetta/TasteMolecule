@@ -4,7 +4,7 @@ export const IMG_URL = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,
 
 export const IMG_CAROUSEL_URL = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/"
 
-export const CAROUSEL_URL = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.4385553&lng=79.1288412&page_type=DESKTOP_WEB_LISTING"
+export const CAROUSEL_URL = "https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.4385553&lng=79.1288412&page_type=DESKTOP_WEB_LISTING"
 
 export const DETAILS_URL = "https://corsproxy.io/?https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=18.4385553&lng=79.1288412&restaurantId="
 
