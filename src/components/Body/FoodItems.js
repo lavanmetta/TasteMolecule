@@ -3,7 +3,12 @@ import { DET_IMG_URL } from "../../config";
 
 function FoodItems({ foodItem }) {
   const { name, description, imageId, price } = foodItem?.card?.info;
+  const maxLength = 50;
 
+  const truncatedDescription =
+   description && description.length > maxLength
+      ? description.substring(0, maxLength) + "..."
+      : description;
   return (
     <div>
       <div className="food-item-container">
@@ -11,7 +16,7 @@ function FoodItems({ foodItem }) {
         <div>
           <h3>{name}</h3>
           <h5>₹ {Math.floor(price / 100)}/-</h5>
-          <p>{description}</p>
+          <p>{truncatedDescription}</p>
         </div>
         <div className="btn-cart">
           <button>

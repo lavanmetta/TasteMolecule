@@ -74,6 +74,7 @@
   display: flex;
   flex-direction: column;
   width: 200px;
+  height: max-content;
   padding: 6px;
   border-radius: 6px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -87,7 +88,9 @@
 
 .food-item-container > img {
   width: 100%;
+  height: 160px;
   border-radius: 6px;
+  object-fit: cover;
 }
 
 .food-item-container > div > p {

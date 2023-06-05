@@ -24,7 +24,7 @@ function RestaurantDetails() {
       console.log(lists)
       setListOfRestaurants(lists);
       const items =
-        lists[3]?.groupedCard?.cardGroupMap?.REGULAR?.cards[4]?.card?.card
+        lists[3]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card
           ?.itemCards || [];
       setFoodItems(items);
       setIsLoading(false);
