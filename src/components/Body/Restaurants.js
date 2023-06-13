@@ -46,12 +46,13 @@ const Restaurants = () => {
       <Search handleSearch={handleSearch} />
 
       {isLoading ? (
-        <div className="restaurant-card">
+        <div className="res-card">
           <div className="list-of-restro">
             <Shimmer />
           </div>
         </div>
       ) : (
+        <div className="rl">
         <div className="list-of-restro">
           {filteredRestaurants.map((restaurant) => (
             <RestaurantCard
@@ -60,6 +61,7 @@ const Restaurants = () => {
               isLoading={isLoading}
             />
           ))}
+        </div>
         </div>
       )}
 

@@ -21,7 +21,7 @@ function RestaurantDetails() {
     try {
       const response = await axios.get(DETAILS_URL + resID);
       const lists = response?.data?.data?.cards;
-      console.log(lists)
+      console.log(lists);
       setListOfRestaurants(lists);
       const items =
         lists[3]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card
@@ -33,14 +33,12 @@ function RestaurantDetails() {
     }
   };
 
-  
-
   return (
     <div className="ir-container">
       <RestaurantBanner bannerDetails={listOfRestaurants[0]} />
 
       {isLoading ? (
-        <div className="restaurant-card">
+        <div className="res-card">
           <div className="list-of-restro">
             <Shimmer />
           </div>

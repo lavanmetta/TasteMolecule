@@ -8,6 +8,7 @@ function Search({ handleSearch }) {
   };
 
   return (
+    <div className="sc">
     <div className="search-container">
       <div className="s-icon">
         <i className="ri-search-line "></i>
@@ -19,6 +20,7 @@ function Search({ handleSearch }) {
         className="inp"
         placeholder="Search a restaurant"
       />
+    </div>
     </div>
   );
 }
