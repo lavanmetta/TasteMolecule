@@ -44,6 +44,89 @@
   color: coral;
 }
 
- i {
+i {
   margin: 5px;
+}
+
+@media all and (max-width: 768px) {
+  .nav-logo > h2 {
+    font-size: 18px;
+  }
+
+  .nav-logo {
+    margin: 5px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links1 {
+    background-color: black;
+    margin: 0px;
+    color: white !important;
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 200vh;
+    margin-top: 10rem;
+    transform: translateX(100%);
+    transition: transform 500ms ease;
+  }
+
+  .nav-links2 {
+    background-color: black;
+    margin: 0px;
+    color: white !important;
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 200vh;
+    margin-top: 10rem;
+    transform: translateX(50%);
+    transition: transform 500ms ease;
+  }
+
+  .nav-links > a {
+    color: white;
+  }
+
+  .burger {
+    margin: 10px;
+  }
+
+  .burger > i {
+    font-size: 20px;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .burger {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 16px;
+  }
+
+  .nav-links > a {
+    margin: 8px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+  .nav-links > a:hover {
+    color: coral;
+  }
 }
