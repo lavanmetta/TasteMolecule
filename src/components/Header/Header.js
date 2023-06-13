@@ -1,28 +1,13 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import navlogo from "../../Assets/images/navlogo.png";
 import "./Header.css";
 
 const Header = () => {
-  const [name, setName] = useState("nav-links1");
-  const navLinksRef = useRef(null);
-
-  useEffect(() => {
-    const handleOutsideClick = (event) => {
-      if (navLinksRef.current && !navLinksRef.current.contains(event.target)) {
-        setName("nav-links1");
-      }
-    };
-
-    document.addEventListener("mousedown", handleOutsideClick);
-
-    return () => {
-      document.removeEventListener("mousedown", handleOutsideClick);
-    };
-  }, []);
+  const [isOpen, setIsOpen] = useState(false);
 
   const onClickBurger = () => {
-    setName("nav-links2");
+    setIsOpen(!isOpen);
   };
 
   return (
@@ -33,9 +18,12 @@ const Header = () => {
       </div>
 
       <div className="burger">
-        <i className="ri-menu-line" onClick={onClickBurger}></i>
+        <i
+          className={isOpen ? "ri-menu-unfold-fill" : "ri-menu-line"}
+          onClick={onClickBurger}
+        ></i>
       </div>
-      <div ref={navLinksRef} className={`nav-links ${name}`}>
+      <div className={`nav-links ${isOpen ? "nav-links2" : "nav-links1"}`}>
         <Link to="/">
           <i className="ri-gift-2-line"></i>Offers
         </Link>
