@@ -179,7 +179,7 @@ a {
   }
 
   .restaurant-card {
-    height: 230px;
+    height: max-content;
   }
 
   .rl {
@@ -200,9 +200,10 @@ a {
   .green {
     display: flex;
     flex-direction: row;
-    padding: 1px 3px 1px 3px;
+    padding: 1px 8px 1px 5px;
     align-items: center;
     height: min-content;
+    width: min-content;
   }
 
   .inp {
@@ -228,6 +229,8 @@ a {
     padding: 1rem;
     
   }
-
+  .details-container {
+    flex-direction: column;
+  }
   
 }
