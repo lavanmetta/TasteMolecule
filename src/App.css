@@ -5,6 +5,7 @@ body {
     font-family: poppins, 'sans-serif';
     margin: 0px;
     overflow-x: hidden;
+    padding: 0;
     width: 100%;
     text-decoration: none !important;
    

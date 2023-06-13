@@ -49,7 +49,7 @@ const Footer = () => {
         </div>
 
         <div>
-          <img src={gp} alt="gp" />
+          <img src={gp} className="gp" alt="gp" />
         </div>
       </div>
       <hr />

@@ -160,3 +160,20 @@ a {
 .carousel-item .active {
   transform: translateX(0);
 }
+
+@media all and (max-width: 768px) {
+  .list-of-restro {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-content: center;
+    gap: 10px;
+   
+    margin-top: 2rem;
+   
+    
+  }
+
+
+
+ 
+}
