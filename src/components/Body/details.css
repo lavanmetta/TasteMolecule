@@ -133,3 +133,36 @@
   width: 100%;
   margin-top: 2rem;
 }
+
+@media all and (max-width: 768px) {
+  .c1 {
+    padding: 1rem;
+  }
+
+  .fim {
+    
+    grid-template-columns: repeat(2, 1fr);
+    align-content: center;
+    gap: 20px;
+  }
+
+  .food-item-container {
+    width: 95%;
+    height: max-content;
+    border-radius: 6px;
+    flex-direction: column;
+    padding: 6px;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    box-shadow: 0 2px 8px #63636333;
+  }
+
+  .f {
+    padding: 10px;
+    margin: auto;
+  }
+
+  .food-item-container > div > h3 {
+    font-size: 14px;
+  }
+}

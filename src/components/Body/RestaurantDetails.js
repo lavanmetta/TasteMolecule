@@ -44,10 +44,12 @@ function RestaurantDetails() {
           </div>
         </div>
       ) : (
-        <div className="fim">
-          {foodItems.map((item, index) => (
-            <FoodItems key={index} foodItem={item} />
-          ))}
+        <div className="f">
+          <div className="fim">
+            {foodItems.map((item, index) => (
+              <FoodItems key={index} foodItem={item} />
+            ))}
+          </div>
         </div>
       )}
     </div>
