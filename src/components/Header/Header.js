@@ -36,6 +36,9 @@ const Header = () => {
         <Link to="/">
           <i className="ri-customer-service-2-line"></i>Contact
         </Link>
+        <Link to="/">
+          <i className="ri-shopping-cart-line"></i>Cart
+        </Link>
       </div>
     </div>
   );
