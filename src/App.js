@@ -7,7 +7,7 @@ import Restaurants from "./components/Body/Restaurants";
 
 import About from "./components/About/About";
 import RestaurantDetails from "./components/Body/RestaurantDetails.js";
-
+import './App.css'
 const App = () => {
   return (
     <>
